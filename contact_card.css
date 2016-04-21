@@ -1,0 +1,40 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+.container{
+    width: 1000px;
+}
+.left_column{
+    width: 450px;
+    margin: 10px 0 0 10px;
+    display: inline-block;
+    vertical-align: top;
+}
+label, textarea{
+    display: block;
+    margin-bottom: 15px;
+}
+.contact_cards{
+    display: inline-block;
+    vertical-align: top;
+}
+.new_card{
+    width: 400px;
+    height: 200px;
+    border: 1px solid black;
+    padding: 15px;
+    text-align: center;
+    margin-bottom: 15px;
+}
+button{
+    margin-top: 35px;
+    background-color: #9999ff;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+}
+h1{
+    text-align: center;
+    margin: 20px 0;
+}

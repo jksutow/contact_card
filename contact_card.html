@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Contact Card</title>
+        <link rel="stylesheet" type="text/css" href="contact_card.css" >
+        <script type="text/javascript" src="jquery-2.2.3.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function(){
+                $('form').submit(function(){
+                    event.preventDefault()
+
+                    var firstName = $("input[name='first_name']").val();
+                    var lastName= $("input[name='last_name']").val();
+                    var description = $('.description').val();
+
+                    $('.contact_cards').append(
+                        '<div class="new_card">'+
+                        '<h2>' + firstName+' ' +lastName+ '</h2>'+
+                        '<button>Click for Description! </button>'+
+                        '</div>');
+
+                    $(document).on('click','button', function(){
+                        event.preventDefault();
+                        $(this).hide();
+                        $('h1').hide();
+                        $('.new_card').append(description);
+
+                });
+
+                    $('form').trigger('reset');
+                });
+
+            });
+
+        </script>
+    </head>
+    <body>
+        <div class="container">
+            <h1>CONTACT CARD INFO</h1>
+            <div class="left_column">
+                <form>
+                    <label>First Name: <input type="text" name="first_name"></label>
+                    <label>Last Name: <input type="text" name="last_name"></label>
+                    <label>Description: <textarea name="description" class="description" rows="8" cols="40" value="Enter description:"></textarea></label>
+                    <input type="submit" value="Add User">
+                </form>
+            </div><!--END of left column-->
+            <div class="contact_cards">
+
+            </div><!--END of right column-->
+
+
+
+        </div><!--END of container-->
+    </body>
+</html>
